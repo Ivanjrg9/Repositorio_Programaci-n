@@ -30,6 +30,25 @@ public class Libros {
         }else {
             System.out.println("Error! Ya esta prestado.");
         }
+    }
+
+    public void devolver(){
+        if (!disponible){
+            disponible=true;
+            librosDisponible++;
+            System.out.println("Has devuelto " + titulo + ", Gracias!");
+        }else {
+            System.out.println("Este libro ya esta en la estanteria.");
+        }
+    }
+
+    public static int getCantidadLibros(){
+        return cantidadLibros;
+
+    }
+
+    public static int getLibrosDisponible(){
+        return librosDisponible;
 
     }
 
