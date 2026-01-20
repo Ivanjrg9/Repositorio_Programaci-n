@@ -19,7 +19,8 @@ public class Libros {
 
         cantidadLibros++;
         librosDisponible++;
-        this.id= "LIB00" + cantidadLibros;
+
+        this.id= generarId();//"LIB00" + cantidadLibros
     }
 
     public void Prestar(){
@@ -41,6 +42,10 @@ public class Libros {
             System.out.println("Este libro ya esta en la estanteria.");
         }
     }
+    private String generarId() {
+
+        return "LIB-" + String.format("%03d", cantidadLibros);
+    }
 
     public static int getCantidadLibros(){
         return cantidadLibros;
@@ -52,5 +57,7 @@ public class Libros {
 
     }
 
-
+    public String getId(){
+        return this.id;
+    }
 }
