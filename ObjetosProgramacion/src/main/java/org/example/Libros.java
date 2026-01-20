@@ -42,6 +42,16 @@ public class Libros {
             System.out.println("Este libro ya esta en la estanteria.");
         }
     }
+
+    @Override
+    public String toString() {
+        // Creamos un texto que diga si está en la estantería o no
+        String estado = disponible ? "Disponible" : "Prestado";
+
+        // Devolvemos toda la info en una sola frase bonita
+        return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado;
+    }
+
     private String generarId() {
 
         return "LIB-" + String.format("%03d", cantidadLibros);
