@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Libros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Libros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LibrosApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LibrosApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Paciente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PacienteApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="38W28Y1ZNlUhWR4Mz4nK6BqFTBk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,6 +36,7 @@
   "keyToString": {
     "Application.LibrosApp.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.PacienteApp.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
