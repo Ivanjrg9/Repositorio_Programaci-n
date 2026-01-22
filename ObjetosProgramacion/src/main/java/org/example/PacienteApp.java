@@ -1,8 +1,5 @@
 package org.example;
 
-<<<<<<< HEAD
-public class PacienteApp {
-=======
 import java.util.Scanner;
 
 public class PacienteApp {
@@ -57,7 +54,5 @@ public class PacienteApp {
 
         System.out.println("--> Dni del paciente 1: " + paciente1.getDni());
 
-
     }
->>>>>>> b4eb67b992fc62ca6733ea1d354ebad8399528ab
 }

@@ -1,8 +1,4 @@
 package org.example;
-
-<<<<<<< HEAD
-public class Paciente {
-=======
 import java.util.Random;
 
 public class Paciente {
@@ -145,5 +141,4 @@ public class Paciente {
         this.altura = altura;
     }
 
->>>>>>> b4eb67b992fc62ca6733ea1d354ebad8399528ab
 }
