@@ -30,6 +30,15 @@ public class Paciente {
     public Paciente (){
         this(null,0,DEF_SEXO,0,0);
     }
+    // Nuevo constructor para el objeto 2
+    public Paciente(String nombre, int edad, char sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = comprobarSexo(sexo);
+        this.dni = generarDNI(); // No olvides el DNI
+        this.peso = 0;           // Peso por defecto
+        this.altura = 0;         // Altura por defecto
+    }
 
     private String generarDNI(){
 
@@ -49,10 +58,7 @@ public class Paciente {
     }
 
     public int calcularIMC (){
-
         double resultado = peso / Math.pow(((double) altura/100),2);
-
-        System.out.println(resultado);
 
         if (resultado < 20){
             return INFRAPESO;
@@ -61,11 +67,9 @@ public class Paciente {
         }else{
             return PESO_IDEAL;
         }
-
     }
 
     public boolean esMayorDeEdad (){
-
         if (edad >= 18){
             return true;
         }else{
@@ -74,7 +78,6 @@ public class Paciente {
     }
 
     private char comprobarSexo(char sexo){
-
         if (sexo == 'H' || sexo == 'M'){
             return sexo;
         }else{
