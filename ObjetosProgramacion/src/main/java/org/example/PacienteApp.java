@@ -22,7 +22,7 @@ public class PacienteApp {
         System.out.print("Introduce la altura (cm): ");
         int altura = teclado.nextInt();
 
-        Paciente paciente1 = new Paciente("Pepe", 40, 'H', 90, 170);
+        Paciente paciente1 = new Paciente(nombre, edad, sexo, peso, altura);
 
         Paciente paciente2 = new Paciente("Paco", 70,'H');
 
@@ -34,6 +34,8 @@ public class PacienteApp {
         paciente3.setAltura(180);
 
         System.out.println("-----------------------------------");
+
+        System.out.println("Paciente 2:" + paciente2.toString());
 
         int estafit = paciente1.calcularIMC();
 
@@ -53,6 +55,7 @@ public class PacienteApp {
         }
 
         System.out.println("--> Dni del paciente 1: " + paciente1.getDni());
+
 
     }
 }

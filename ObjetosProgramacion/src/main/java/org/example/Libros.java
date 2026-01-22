@@ -20,7 +20,7 @@ public class Libros {
         cantidadLibros++;
         librosDisponible++;
 
-        this.id= generarId();//"LIB00" + cantidadLibros
+        this.id= generarId();
     }
 
     public void Prestar(){
@@ -45,10 +45,8 @@ public class Libros {
 
     @Override
     public String toString() {
-        // Creamos un texto que diga si está en la estantería o no
         String estado = disponible ? "Disponible" : "Prestado";
 
-        // Devolvemos toda la info en una sola frase bonita
         return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado;
     }
 

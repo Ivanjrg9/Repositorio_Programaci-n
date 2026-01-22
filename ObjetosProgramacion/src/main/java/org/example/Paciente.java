@@ -86,6 +86,7 @@ public class Paciente {
     }
 
     public Random getAleatorio() {
+
         return aleatorio;
     }
 
@@ -139,6 +140,13 @@ public class Paciente {
 
     public void setAltura(int altura) {
         this.altura = altura;
+    }
+
+
+    @Override
+    public String toString(){
+
+        return "Nombre = " + nombre + " | edad = " + edad + " | Dni= " + dni + " | Sexo= " + sexo + " | Peso= " + peso + " | Altura= " + altura;
     }
 
 }
