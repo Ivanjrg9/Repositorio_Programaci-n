@@ -6,6 +6,7 @@ public class Libros {
     private String autor;
     private String id;
     private boolean disponible;
+    private Estudiante estudiantePrestado;
 
     private static String ID_LIBRO = "LIB";
     private static int cantidadLibros = 0;
@@ -19,13 +20,18 @@ public class Libros {
         cantidadLibros++;
         librosDisponible++;
         this.id= ID_LIBRO;
+        estudiantePrestado=null;
     }
 
-    public void Prestar(){
+    public void Prestar(Estudiante estudiante){
+
         if (disponible){
             disponible = false;
             librosDisponible--;
-            System.out.println("El libro " + titulo + " ha sido prestado.");
+            System.out.println("El libro " + titulo + " ha sido prestado a " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso());
+           // System.out.println("El libro " + titulo + " ha sido prestado.");
+            estudiantePrestado=estudiante;
+            estudiantePrestado.setLibros(this);
         }else {
             System.out.println("Error! Ya esta prestado.");
         }
@@ -35,17 +41,22 @@ public class Libros {
         if (!disponible){
             disponible=true;
             librosDisponible++;
-            System.out.println("Has devuelto " + titulo + ", Gracias!");
+            System.out.println("El libro " + titulo + " ha sido devuelto por " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso() );
+           // System.out.println("Has devuelto " + titulo + ", Gracias!");
+            estudiantePrestado.setLibros(null);
+            estudiantePrestado=null;
         }else {
             System.out.println("Este libro ya esta en la estanteria.");
         }
+
     }
 
     @Override
     public String toString() {
         String estado = disponible ? "Disponible" : "Prestado";
 
-        return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado;
+        return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado + " Estudiante = " + estudiantePrestado;
+
     }
 
     private String generarId() {
@@ -56,7 +67,7 @@ public class Libros {
     public boolean estaDisponible(){
         return disponible;
     }
-    
+
 
     public static int getCantidadLibros(){
         return cantidadLibros;
@@ -70,5 +81,13 @@ public class Libros {
 
     public String getId(){
         return this.id;
+    }
+
+    public Estudiante getEstudiantePrestado() {
+        return estudiantePrestado;
+    }
+
+    public void setEstudiantePrestado(Estudiante estudiantePrestado) {
+        this.estudiantePrestado = estudiantePrestado;
     }
 }

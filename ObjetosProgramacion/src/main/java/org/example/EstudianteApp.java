@@ -10,5 +10,6 @@ public class EstudianteApp {
         System.out.println(alejandroi.getNia());
 
         System.out.println("Estudiantes creados :" + Estudiante.getContadorEstudiantes());
+        System.out.println(ivan.getLibros());
     }
 }

@@ -20,7 +20,6 @@ public class LibrosApp {
         System.out.println("-----------------------------------------------");
 
         System.out.println("** Prestando libro **");
-        libro1.Prestar();
 
         System.out.println("Libros disponibles ahora: " + Libros.getLibrosDisponible());
         System.out.println("-----------------------------------------------");
@@ -29,5 +28,7 @@ public class LibrosApp {
         libro1.devolver();
 
         System.out.println("Libros disponibles ahora: " + Libros.getLibrosDisponible());
+
+
     }
 }
