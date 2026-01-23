@@ -7,6 +7,8 @@ public class LibrosApp {
         Libros libro2 = new Libros("Harry Potter", "J.K Rowling");
         Libros libro3 = new Libros("El quijote", "Cervantes");
 
+        System.out.println(libro1.toString());
+
 
         System.out.println(libro3);
         System.out.println("El id del primer libro es: " + libro1.getId());

@@ -7,20 +7,18 @@ public class Libros {
     private String id;
     private boolean disponible;
 
-
+    private static String ID_LIBRO = "LIB";
     private static int cantidadLibros = 0;
     private  static  int librosDisponible = 0;
 
     public Libros (String titulo, String autor){
-
         this.autor= autor;
         this.titulo= titulo;
         this.disponible = true;
 
         cantidadLibros++;
         librosDisponible++;
-
-        this.id= generarId();
+        this.id= ID_LIBRO;
     }
 
     public void Prestar(){
@@ -51,9 +49,14 @@ public class Libros {
     }
 
     private String generarId() {
-
-        return "LIB-" + String.format("%03d", cantidadLibros);
+        return "LIB " + cantidadLibros;
+       // return "LIB-" + String.format("%03d", cantidadLibros);
     }
+
+    public boolean estaDisponible(){
+        return disponible;
+    }
+    
 
     public static int getCantidadLibros(){
         return cantidadLibros;
