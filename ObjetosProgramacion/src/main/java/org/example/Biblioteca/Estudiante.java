@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Biblioteca;
 
 public class Estudiante {
 
@@ -8,8 +8,6 @@ public class Estudiante {
     private String curso;
     private  int nia;
     private String email;
-
-
     private Libros libros;
 
     public Estudiante(String nombre, String curso, String email){

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Biblioteca;
 
 public class Libros {
 
@@ -7,12 +7,13 @@ public class Libros {
     private String id;
     private boolean disponible;
     private Estudiante estudiantePrestado;
+    private Editorial editorial;
 
     private static String ID_LIBRO = "LIB";
     private static int cantidadLibros = 0;
     private  static  int librosDisponible = 0;
 
-    public Libros (String titulo, String autor){
+    public Libros (String titulo, String autor, Editorial editorial){
         this.autor= autor;
         this.titulo= titulo;
         this.disponible = true;
@@ -21,17 +22,20 @@ public class Libros {
         librosDisponible++;
         this.id= ID_LIBRO;
         estudiantePrestado=null;
+        this.editorial=editorial;
     }
 
     public void Prestar(Estudiante estudiante){
 
-        if (disponible){
+        if (disponible && estudiante.getLibros()==null){
             disponible = false;
             librosDisponible--;
             System.out.println("El libro " + titulo + " ha sido prestado a " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso());
            // System.out.println("El libro " + titulo + " ha sido prestado.");
             estudiantePrestado=estudiante;
             estudiantePrestado.setLibros(this);
+        }else if (estudiante.getLibros()!=null){
+            System.out.println("El estudiante " + estudiante.getNombre() + "ya tiene un libro prestado");
         }else {
             System.out.println("Error! Ya esta prestado.");
         }
@@ -55,7 +59,7 @@ public class Libros {
     public String toString() {
         String estado = disponible ? "Disponible" : "Prestado";
 
-        return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado + " Estudiante = " + estudiantePrestado;
+        return "LIBRO [" + id + "] " + "Título: " + titulo + " | " + "Autor: " + autor + " | " + "Estado: " + estado + " Estudiante = " + estudiantePrestado + " Editorial " + editorial;
 
     }
 
@@ -89,5 +93,13 @@ public class Libros {
 
     public void setEstudiantePrestado(Estudiante estudiantePrestado) {
         this.estudiantePrestado = estudiantePrestado;
+    }
+
+    public Editorial getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
     }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Biblioteca;
 
 public class EstudianteApp {
     static void main() {
@@ -11,5 +11,7 @@ public class EstudianteApp {
 
         System.out.println("Estudiantes creados :" + Estudiante.getContadorEstudiantes());
         System.out.println(ivan.getLibros());
+        Editorial anaya = new Editorial("Anaya", "España");
+
     }
 }
