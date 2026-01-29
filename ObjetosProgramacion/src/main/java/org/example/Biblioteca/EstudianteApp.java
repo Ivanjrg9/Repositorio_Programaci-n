@@ -13,5 +13,7 @@ public class EstudianteApp {
         System.out.println(ivan.getLibros());
         Editorial anaya = new Editorial("Anaya", "España");
 
+        System.out.println(ivan.getLibros());
+
     }
 }

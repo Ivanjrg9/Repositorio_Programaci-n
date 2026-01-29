@@ -17,15 +17,17 @@ public class Libros {
         this.autor= autor;
         this.titulo= titulo;
         this.disponible = true;
-
         cantidadLibros++;
         librosDisponible++;
         this.id= ID_LIBRO;
         estudiantePrestado=null;
         this.editorial=editorial;
+        editorial.anyadirlibro(this);
+
     }
 
     public void Prestar(Estudiante estudiante){
+        Prestamo prestamo=null;
 
         if (disponible && estudiante.getLibros()==null){
             disponible = false;
@@ -33,7 +35,7 @@ public class Libros {
             System.out.println("El libro " + titulo + " ha sido prestado a " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso());
            // System.out.println("El libro " + titulo + " ha sido prestado.");
             estudiantePrestado=estudiante;
-            estudiantePrestado.setLibros(this);
+            estudiantePrestado.insertarlibro(this);
         }else if (estudiante.getLibros()!=null){
             System.out.println("El estudiante " + estudiante.getNombre() + "ya tiene un libro prestado");
         }else {
@@ -47,7 +49,7 @@ public class Libros {
             librosDisponible++;
             System.out.println("El libro " + titulo + " ha sido devuelto por " + estudiantePrestado.getNombre() + " de " + estudiantePrestado.getCurso() );
            // System.out.println("Has devuelto " + titulo + ", Gracias!");
-            estudiantePrestado.setLibros(null);
+            estudiantePrestado.borrarlibro(this);
             estudiantePrestado=null;
         }else {
             System.out.println("Este libro ya esta en la estanteria.");
