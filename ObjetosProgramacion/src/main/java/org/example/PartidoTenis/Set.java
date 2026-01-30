@@ -1,6 +1,10 @@
 package org.example.PartidoTenis;
 
 public class Set {
+    private int puntosj1;
+    private int puntosj2;
+
+
     public int getPuntosj1() {
         return puntosj1;
     }
@@ -17,8 +21,15 @@ public class Set {
         this.puntosj2 = puntosj2;
     }
 
-    private int puntosj1;
-    private int puntosj2;
+    @Override
+    public String toString() {
+        return "Set{" +
+                "puntosj1=" + puntosj1 +
+                ", puntosj2=" + puntosj2 +
+                '}';
+    }
+
+
 
 
 }
