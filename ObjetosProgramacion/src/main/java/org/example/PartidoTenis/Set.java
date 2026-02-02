@@ -4,6 +4,12 @@ public class Set {
     private int puntosj1;
     private int puntosj2;
 
+    public Set(int puntosj1,int puntosj2){
+        this.puntosj1=puntosj1;
+        this.puntosj2=puntosj2;
+        
+    }
+
 
     public int getPuntosj1() {
         return puntosj1;
