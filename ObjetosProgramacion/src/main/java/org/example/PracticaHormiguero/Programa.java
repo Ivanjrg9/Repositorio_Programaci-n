@@ -86,7 +86,7 @@ public class Programa {
      * Imprime las veces que ha ido un invitado, sus fechas y temporadas.
      * @param nombre Nombre del invitado a rastrear.
      */
-    public boolean buscarInvitado(String nombre) {
+    public boolean rastrearInvitado(String nombre) {
         for (Invitado invitado: listaInvitados) {
             if (invitado.getNombre().equalsIgnoreCase(nombre))
                 return true;

@@ -1,7 +1,5 @@
 package org.example.PracticaHormiguero;
 
-import java.util.Scanner;
-
 public class AppProgramas {
     public static void main() {
 
@@ -32,9 +30,9 @@ public class AppProgramas {
         int veces = elHormiguero.vecesInvitado("Aitana");
         System.out.println("Aitana ha venido " + veces + " veces.");
 
-        elHormiguero.buscarInvitado("Aitana");
+        elHormiguero.rastrearInvitado("Aitana");
 
-        if(elHormiguero.buscarInvitado("Will Smith")) {
+        if(elHormiguero.rastrearInvitado("Will Smith")) {
             System.out.println("Will Smith ha estado en el programa.");
         }
 

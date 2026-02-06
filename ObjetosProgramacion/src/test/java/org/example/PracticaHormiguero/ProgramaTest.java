@@ -25,14 +25,14 @@ public class ProgramaTest {
     }
 
     @Test
-    void testBuscarInvitado() {
+    void testRastrearInvitado() {
 
         Cadena c = new Cadena("Antena 3");
         Programa p = new Programa("Hormiguero", c, "Motos");
 
         p.insertarInvitado("Aitana", "Cantante", 1);
 
-        assertTrue(p.buscarInvitado("Aitana"));
-        assertFalse(p.buscarInvitado("Messi"));
+        assertTrue(p.rastrearInvitado("Aitana"));
+        assertFalse(p.rastrearInvitado("Messi"));
     }
 }
