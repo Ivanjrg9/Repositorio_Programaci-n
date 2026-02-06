@@ -1,12 +1,17 @@
 package org.example.PracticaHormiguero;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
 /**
  * Representa una cadena de televisión que agrupa distintos programas.
  * Mantiene una relación de agregación con la clase Programa.
  */
+@Getter
 public class Cadena {
+    @Setter
     private String nombre;
     private ArrayList<Programa> listaProgramas;
 
