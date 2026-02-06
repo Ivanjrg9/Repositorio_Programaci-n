@@ -7,7 +7,7 @@ public class Set {
     public Set(int puntosj1,int puntosj2){
         this.puntosj1=puntosj1;
         this.puntosj2=puntosj2;
-        
+
     }
 
 

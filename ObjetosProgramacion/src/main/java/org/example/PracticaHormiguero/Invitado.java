@@ -1,59 +1,63 @@
 package org.example.PracticaHormiguero;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
+/**
+ * Representa a un invitado que asiste a un programa de televisión.
+ * Gestiona la información personal, profesional y la fecha de su visita.
+ */
 public class Invitado {
     private String nombre;
     private String profesion;
     private int temporada;
     private LocalDate fecha_visita;
 
-    public Invitado(String nombre,String profesion,int temporada){
-        this.nombre=nombre;
-        this.profesion=profesion;
-        this.temporada=temporada;
-        this.fecha_visita=LocalDate.now();
-    }
-
-    public int getTemporada() {
-        return temporada;
-    }
-
-    public void setTemporada(int temporada) {
-        this.temporada = temporada;
-    }
-
-    public LocalDate getFecha_visita() {
-        return fecha_visita;
-    }
-
-    public void setFecha_visita(LocalDate fecha_visita) {
-        this.fecha_visita = fecha_visita;
-    }
-
-    public String getProfesion() {
-        return profesion;
-    }
-
-    public void setProfesion(String profesion) {
+    /**
+     * Constructor para crear un Invitado. Solicita la fecha de visita por consola.
+     * @param nombre Nombre del invitado.
+     * @param profesion Profesión o actividad principal.
+     * @param temporada Número de temporada en la que participa.
+     */
+    public Invitado(String nombre, String profesion, int temporada) {
+        this.nombre = nombre;
         this.profesion = profesion;
+        this.temporada = temporada;
+        solicitarFecha();
+    }
+    /**
+     * Pide al usuario el año, mes y día para establecer la fecha de visita.
+     */
+    private void solicitarFecha() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce el año de visita para " + nombre + ":");
+        int anyo = sc.nextInt();
+        System.out.println("Introduce el mes:");
+        int mes = sc.nextInt();
+        System.out.println("Introduce el día:");
+        int dia = sc.nextInt();
+        this.fecha_visita = LocalDate.of(anyo, mes, dia);
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getProfesion() {
+        return profesion;
+    }
+
+    public int getTemporada() {
+        return temporada;
+    }
+
+    public LocalDate getFecha_visita() {
+        return fecha_visita;
     }
 
     @Override
     public String toString() {
-        return "Invitado{" +
-                "nombre='" + nombre + '\'' +
-                ", profesion='" + profesion + '\'' +
-                ", temporada=" + temporada +
-                ", fecha_visita=" + fecha_visita +
-                '}';
+        return "Invitado{nombre='" + nombre + "', profesion='" + profesion +
+                "', fecha_visita=" + fecha_visita + ", temporada=" + temporada + "}";
     }
 }

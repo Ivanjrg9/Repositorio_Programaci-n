@@ -4,8 +4,8 @@ public class InstiApp {
     static void main() {
 
         Instituto figueras = new Instituto();
-        Instituto lloixa = new Instituto("lloixa", "Alicante");
-        lloixa.setpoblcion(null);
-        System.out.println(lloixa.getPoblacion());
+       // Instituto lloixa = new Instituto("lloixa", "Alicante");
+       // lloixa.setpoblcion(null);
+      //  System.out.println(lloixa.getPoblacion());
     }
 }

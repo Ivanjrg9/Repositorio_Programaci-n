@@ -5,10 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/ElHormigueroUml.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Markdown.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/PracticaHormiguero/InvitadoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/Partido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/PartidoApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/PartidoApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PartidoTenis/Set.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/AppProgramas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/AppProgramas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Cadena.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Cadena.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Invitado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Invitado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Programa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaHormiguero/Programa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/insti/InstiApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/insti/InstiApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/insti/Instituto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/insti/Instituto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="UML Sequence" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,20 +45,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.LibrosApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PacienteApp.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ramos/OneDrive/Escritorio/Repositorio_Programación/ObjetosProgramacion/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppProgramas.executor": "Run",
+    "Application.LibrosApp.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PacienteApp.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/ramos/OneDrive/Escritorio/Repositorio_Programación/ObjetosProgramacion/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.PracticaHormiguero" />
+    </key>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="" />

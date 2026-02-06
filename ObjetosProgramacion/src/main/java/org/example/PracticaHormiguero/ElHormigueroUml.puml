@@ -1,0 +1,33 @@
+@startuml
+class Cadena {
+  - String nombre
+  - ArrayList<Programa> listaProgramas
+}
+
+class Programa {
+  - String nombre
+  - int temporadas
+  - ArrayList<Empleado> listaEmpleados
+  - ArrayList<Invitado> listaInvitados
+  - Empleado director
+}
+
+class Empleado {
+  - String id
+  - String nombre
+  - String cargo
+  - Empleado director
+  {static} - int contador
+}
+
+class Invitado {
+  - String nombre
+  - String profesion
+  - LocalDate fecha_visita
+  - int temporada
+}
+
+Cadena "1" o-- "0..*" Programa : agregación
+Programa "1" *-- "1..*" Empleado : composición
+Programa "1" *-- "0..*" Invitado : composición
+@enduml
