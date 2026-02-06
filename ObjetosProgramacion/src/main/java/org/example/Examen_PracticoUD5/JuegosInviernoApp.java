@@ -10,12 +10,10 @@ public class JuegosInviernoApp {
 
 
         Equipo Espanya = new Equipo("España");
-        Espanya.crearDeportista(juan);
-
         Equipo Francia = new Equipo("Francia");
-        Francia.crearDeportista(Belen);
 
-        System.out.println(Espanya);
+
+        System.out.println(Espanya.getListadeportistas());
 
     }
 }
