@@ -36,13 +36,13 @@ public class Invitado {
      * Pide al usuario el año, mes y día para establecer la fecha de visita.
      */
     private void solicitarFecha() {
-        Scanner sc = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el año de visita para " + nombre + ":");
-        int anyo = sc.nextInt();
+        int anyo = teclado.nextInt();
         System.out.println("Introduce el mes:");
-        int mes = sc.nextInt();
+        int mes = teclado.nextInt();
         System.out.println("Introduce el día:");
-        int dia = sc.nextInt();
+        int dia = teclado.nextInt();
         this.fecha_visita = LocalDate.of(anyo, mes, dia);
     }
 
