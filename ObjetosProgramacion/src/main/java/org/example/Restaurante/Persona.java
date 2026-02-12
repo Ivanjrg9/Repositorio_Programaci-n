@@ -15,6 +15,10 @@ public abstract class Persona {
 
     }
 
+    public abstract void accederBanyo();
+
+
+
 
     public String getNombre() {
         return nombre;

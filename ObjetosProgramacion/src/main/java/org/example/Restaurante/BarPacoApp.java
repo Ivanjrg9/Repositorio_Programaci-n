@@ -11,5 +11,8 @@ public class BarPacoApp {
 
         jose.mostrarInfoPersona();
 
+        jose.accederBanyo();
+
+
     }
 }
