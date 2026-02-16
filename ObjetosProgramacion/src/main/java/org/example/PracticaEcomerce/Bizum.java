@@ -9,23 +9,30 @@ public class Bizum extends MetodoPago{
     private int pin;
 
 
-    public Bizum(double importe,String telefono,int pin) {
-        this.telefono=telefono;
-        this.pin=pin;
+    public Bizum(double importe,String telefono) {
         super(importe);
+        this.telefono=telefono;
+        pin=aleatorio.nextInt(900000) + 100000;
+        System.out.println("El pin es: " + this.pin);
     }
 
     @Override
     public void procesaPago(double importe) {
         System.out.println("Procesando pago de " + importe + " € con Bizum");
-
     }
 
-    public void validarPaypal(){
-        
-
-
+    public boolean validarBizum(int pinIntroducido) {
+        if (this.telefono.length() == 9 && pinIntroducido == this.pin) {
+            System.out.println("Pin correcto!");
+            return true;
+        } else {
+            System.out.println("Pin incorrecto");
+            return false;
+        }
     }
+
+
+
 
     public String getTelefono() {
         return telefono;
