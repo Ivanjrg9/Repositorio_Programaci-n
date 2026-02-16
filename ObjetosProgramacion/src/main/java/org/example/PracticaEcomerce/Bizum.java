@@ -22,7 +22,7 @@ public class Bizum extends MetodoPago{
     }
 
     public void validarPaypal(){
-        
+
 
 
     }
