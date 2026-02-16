@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="" />
+    <list default="true" id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaEcomerce/AppEcommerce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaEcomerce/Tienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaEcomerce/Bizum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaEcomerce/Bizum.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="UML Sequence" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +41,7 @@
     "Application.LibrosApp.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.PacienteApp.executor": "Run",
+    "Application.Tienda.executor": "Run",
     "DefaultPlantUmlFileTemplate": "UML Sequence",
     "JUnit.InvitadoTest.executor": "Run",
     "JUnit.ProgramaTest.executor": "Run",
