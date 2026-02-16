@@ -21,12 +21,12 @@ public class Bizum extends MetodoPago{
         System.out.println("Procesando pago de " + importe + " € con Bizum");
     }
 
-<<<<<<< HEAD
+
     public void validarPaypal(){
 
+    }
 
 
-=======
     public boolean validarBizum(int pinIntroducido) {
         if (this.telefono.length() == 9 && pinIntroducido == this.pin) {
             System.out.println("Pin correcto!");
@@ -35,11 +35,7 @@ public class Bizum extends MetodoPago{
             System.out.println("Pin incorrecto");
             return false;
         }
->>>>>>> 04a8957864c5c10616b766057d8418f2de92aa72
     }
-
-
-
 
     public String getTelefono() {
         return telefono;
