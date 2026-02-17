@@ -1,0 +1,47 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+abstract class MetodoPago {
+    - importe: double
+    + MetodoPago(importe: double)
+    + {abstract} procesaPago(importe: double)
+    + getImporte(): double
+    + setImporte(importe: double)
+}
+
+class Bizum {
+    - telefono: String
+    - pin: int
+    + Bizum(importe: double, telefono: String)
+    + validarBizum(pinIntroducido: int): boolean
+    + procesaPago(importe: double)
+}
+
+class PayPal {
+    - cuenta: String
+    - saldo: double
+    + PayPal(importe: double, cuenta: String)
+    + validarPaypal(): boolean
+    + procesaPago(importe: double)
+}
+
+class TarjetaCredito {
+    - numeroTarjeta: String
+    - tipoTarjeta: String
+    + TarjetaCredito(importe: double, numero: String, tipo: String)
+    + validarTarjeta(): boolean
+    + procesaPago(importe: double)
+}
+
+class Tienda {
+    + {static} iniciarPago()
+    + {static} realizarPago(metodo: MetodoPago)
+}
+
+MetodoPago <|-- Bizum
+MetodoPago <|-- PayPal
+MetodoPago <|-- TarjetaCredito
+Tienda ..> MetodoPago : usa
+
+@enduml

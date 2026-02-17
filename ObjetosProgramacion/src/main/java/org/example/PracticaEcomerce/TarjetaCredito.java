@@ -1,5 +1,7 @@
 package org.example.PracticaEcomerce;
-
+/**
+ * Clase que gestiona pagos con tarjeta de crédito (VISA, MASTERCARD, MAESTRO).
+ */
 public class TarjetaCredito extends MetodoPago{
     private String numeroTarjeta;
     private String tipoTarjeta;
@@ -15,7 +17,10 @@ public class TarjetaCredito extends MetodoPago{
         System.out.println("Procesando pago de: " + importe + " € " + " con tarjeta de crédito VISA");
 
     }
-
+    /**
+     * Valida que el número tenga 16 dígitos y el tipo sea uno de los permitidos.
+     * @return true si ambos requisitos se cumplen.
+     */
     public boolean validarTarjeta() {
         boolean numeroCorrecto = false;
         boolean tipoCorrecto = false;

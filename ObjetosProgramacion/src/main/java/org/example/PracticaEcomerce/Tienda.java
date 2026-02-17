@@ -1,9 +1,13 @@
 package org.example.PracticaEcomerce;
 
 import java.util.Scanner;
-
+/**
+ * Clase principal que actúa como interfaz de usuario para gestionar los pagos.
+ */
 public class Tienda {
-
+    /**
+     * Método principal del flujo. Solicita el método de pago y los datos necesarios.
+     */
     public static void iniciarPago() {
         Scanner teclado = new Scanner(System.in);
         System.out.println("¿Qué método de pago quieres usar? [Bizum, Paypal, Tarjeta]");
@@ -64,7 +68,10 @@ public class Tienda {
                 break;
         }
     }
-
+    /**
+     * Método polimórfico que ejecuta el cobro final.
+     * @param metodoPago Objeto de tipo MetodoPago (Bizum, PayPal o Tarjeta).
+     */
     public static void realizarPago(MetodoPago metodoPago) {
         Scanner teclado = new Scanner(System.in);
 
