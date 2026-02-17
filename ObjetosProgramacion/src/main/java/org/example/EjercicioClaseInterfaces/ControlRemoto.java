@@ -4,7 +4,4 @@ public interface ControlRemoto {
     void sincronizar();
 
 
-
-
-
 }
