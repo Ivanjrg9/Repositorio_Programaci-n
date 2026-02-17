@@ -16,19 +16,27 @@ public class TarjetaCredito extends MetodoPago{
 
     }
 
-    public void validarTarjeta(){
-        if (!numeroTarjeta.matches("\\d+")){
+    public boolean validarTarjeta() {
+        boolean numeroCorrecto = false;
+        boolean tipoCorrecto = false;
+
+        if (!numeroTarjeta.matches("\\d+")) {
             System.out.println("Error, solo se admiten numeros");
-        } else if (numeroTarjeta.length() != 16 ) {
+        } else if (numeroTarjeta.length() != 16) {
             System.out.println("Error, numero incorrecto");
-        }else {
+        } else {
             System.out.println("Numero de tarjeta correcto");
+            numeroCorrecto = true;
         }
-        if (tipoTarjeta.equals("VISA") || tipoTarjeta.equals("MASTERCARD") || tipoTarjeta.equals("MAESTRO")){
+
+        if (tipoTarjeta.equals("VISA") || tipoTarjeta.equals("MASTERCARD") || tipoTarjeta.equals("MAESTRO")) {
             System.out.println("Tipo de tarjeta correcto");
-        }else {
+            tipoCorrecto = true;
+        } else {
             System.out.println("Tipo de tarjeta incorrecto");
         }
+
+        return numeroCorrecto && tipoCorrecto;
     }
 
     public String getTipoTarjeta() {

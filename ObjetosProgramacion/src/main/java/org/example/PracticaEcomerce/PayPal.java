@@ -4,26 +4,29 @@ public class PayPal extends MetodoPago{
     private String cuenta;
     private double saldo;
 
-    final double saldoDefault = 23;
 
 
-    public PayPal(double importe,String cuenta,double saldo) {
+
+    public PayPal(double importe,String cuenta) {
         this.cuenta=cuenta;
-        this.saldo=saldo;
+        this.saldo= 23.0;
         super(importe);
     }
 
-    public void validarPaypal(){
-        if (cuenta.matches("^[A-Za-z0-9+_.-]+@.com$")){
+    public boolean validarPaypal() {
+        if (cuenta.matches("^[A-Za-z0-9+_.-]+@.+\\.com$")) {
             System.out.println("Correo correcto");
-        }else {
+        } else {
             System.out.println("Correo incorrecto");
+            return false;
         }
 
-        if (saldoDefault!=getImporte()){
-            System.out.println("Saldo insuficiente");
-        }else {
+        if (this.saldo >= getImporte()) {
             System.out.println("Saldo suficiente");
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente");
+            return false;
         }
     }
 
