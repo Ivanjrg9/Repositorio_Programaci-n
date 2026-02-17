@@ -1,8 +1,10 @@
 package org.example.EjercicioClaseInterfaces;
 
 public interface ControlRemoto {
+    void sincronizar();
 
-    public static void sincronizar(){
 
-    }
+
+
+
 }

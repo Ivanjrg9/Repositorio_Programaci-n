@@ -5,8 +5,24 @@ import org.example.EjercicioClaseInterfaces.Dispositivo;
 
 public class Televisor extends Dispositivo implements ControlRemoto {
 
+    public Televisor(String nombre){
+        super(nombre);
+    }
     @Override
     public void encender() {
-        System.out.println("Encendiendo televisor...");
+      if (super.isEstado()){
+          System.out.println("El televisor ya esta encendido ");
+      }else {
+          System.out.println("Encendiendo televisor...");
+
+      }
     }
+
+    @Override
+    public void sincronizar() {
+        System.out.println("Sincronizando televisor con control remoto...");
+    }
+
 }
+
+
