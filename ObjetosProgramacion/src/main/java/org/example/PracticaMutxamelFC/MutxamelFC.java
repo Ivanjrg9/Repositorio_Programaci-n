@@ -1,8 +1,13 @@
 package org.example.PracticaMutxamelFC;
 
-public abstract class MutxamelFC {
+public abstract class MutxamelFC implements FuncionesIntegrantes {
     private String nombre;
     private int edad;
+
+    public MutxamelFC(String nombre,int edad){
+        this.edad=edad;
+        this.nombre=nombre;
+    }
 
     public String getNombre() {
         return nombre;
