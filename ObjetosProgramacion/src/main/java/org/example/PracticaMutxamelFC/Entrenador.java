@@ -31,11 +31,13 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
     }
 
     public void setFormacionPreferida(String formacionPreferida) {
-            validarFormacion();
+        validarFormacion();
     }
 
-    public void validarFormacion(String formacionPreferida){
-
+    public void validarFormacion(){
+        if (!formacionPreferida.matches("\\d-\\d-\\d")){
+            throw new FormacionCorrectaException();
+        }
     }
 
 
