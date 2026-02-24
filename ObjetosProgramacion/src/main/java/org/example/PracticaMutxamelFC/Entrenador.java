@@ -11,11 +11,11 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
     }
 
     public void planificarEntrenamiento(){
-        System.out.println("Entrenador planificando entrenamiento...");
+        System.out.println("Entrenador " + getNombre() + " planificando entrenamiento...");
     }
 
     public void hacerCambios(){
-        System.out.println("Entrenador haciendo cambios...");
+        System.out.println("Entrenador " + getNombre() + " haciendo cambios...");
     }
 
     public Equipos getEquipos() {
@@ -31,32 +31,41 @@ public class Entrenador extends MutxamelFC implements AccionesDeportivas{
     }
 
     public void setFormacionPreferida(String formacionPreferida) {
-        this.formacionPreferida = formacionPreferida;
+            validarFormacion();
+    }
+
+    public void validarFormacion(String formacionPreferida){
+
     }
 
 
     @Override
     public void concentrarse() {
+        System.out.println("Entrenador " + getNombre() + " dando la charla de concentracion");
 
     }
 
     @Override
     public void viajar(String ciudad) {
+        System.out.println("Entrenador viajando a " + ciudad);
 
     }
 
     @Override
     public void celebrarGol() {
+        System.out.println("Entrenador " + getNombre() + " celebrando el gol");
 
     }
 
     @Override
     public void entrenar() {
+        System.out.println("Entrenador " + getNombre() + " realizando el entrenamiento");
 
     }
 
     @Override
     public void jugarPartido(String rival) {
+        System.out.println("Entrenador enfrentandose a " + rival);
 
     }
 }

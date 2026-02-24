@@ -32,16 +32,19 @@ public class Acompanyante extends MutxamelFC{
 
     @Override
     public void concentrarse() {
+        System.out.println("Acomañante " + getNombre() + " concentrandose para el partido");
 
     }
 
     @Override
     public void viajar(String ciudad) {
+        System.out.println("Acompañante viajando a " + ciudad);
 
     }
 
     @Override
     public void celebrarGol() {
+        System.out.println("Acompañante " + getNombre() + " gritando gooool!!");
 
     }
 }

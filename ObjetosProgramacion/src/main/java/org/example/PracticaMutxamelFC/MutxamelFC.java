@@ -24,15 +24,4 @@ public abstract class MutxamelFC implements FuncionesIntegrantes {
     public void setEdad(int edad) {
         this.edad = edad;
     }
-
-    @Override
-    public String toString() {
-        return "MutxamelFC{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
-    }
-
-
-
 }
