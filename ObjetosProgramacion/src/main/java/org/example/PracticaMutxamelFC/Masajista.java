@@ -1,13 +1,18 @@
 package org.example.PracticaMutxamelFC;
 
+import java.util.ArrayList;
+
 public class Masajista extends MutxamelFC{
     private String titulacion;
     private int anyosExperiencia;
+    private ArrayList<Jugador>listajugadores;
 
-    public Masajista(String nombre, int edad,String titulacion,int anyosExperiencia) {
+    public Masajista(String nombre, int edad, String titulacion, int anyosExperiencia, ArrayList<Jugador>listajugadores) {
         super(nombre, edad);
         this.anyosExperiencia=anyosExperiencia;
         this.titulacion=titulacion;
+        this.listajugadores=listajugadores;
+
     }
 
     public void darMasaje(Jugador jugador){
@@ -28,6 +33,14 @@ public class Masajista extends MutxamelFC{
 
     public void setAnyosExperiencia(int anyosExperiencia) {
         this.anyosExperiencia = anyosExperiencia;
+    }
+
+    public ArrayList<Jugador> getListajugadores() {
+        return listajugadores;
+    }
+
+    public void setListajugadores(ArrayList<Jugador> listajugadores) {
+        this.listajugadores = listajugadores;
     }
 
 
