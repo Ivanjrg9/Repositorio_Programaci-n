@@ -16,12 +16,33 @@ public class AppMantenimiento {
         System.out.println("[X]. Salir");
         System.out.println("==========================================================");
         System.out.println("Selecciona una opción -->");
-        String opcion = teclado.next();
+        String opcion = teclado.next().toUpperCase();
 
         switch (opcion){
             case "1":
-                System.out.println("");
+                System.out.println("Opción no disponible, lo siento");
+                break;
+            case "2":
+                System.out.println("Opción no disponible, lo siento...");
+                break;
+            case "3":
+
+                break;
+            case "4":
+
+                break;
+            case "X":
+                System.out.println("Saliendo...");
+                break;
+            default:
+                System.out.println("Elige una opcion correcta porfavor...");
+                break;
+
         }
+
+     
+
+
 
     }
 }

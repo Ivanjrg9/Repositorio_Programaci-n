@@ -1,6 +1,7 @@
 package org.example.PracticaMutxamelFC;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Jugador extends MutxamelFC implements AccionesDeportivas{
     private int dorsal;
@@ -11,6 +12,7 @@ public class Jugador extends MutxamelFC implements AccionesDeportivas{
     public Jugador(String nombre, int edad,Posiciones posicion,Equipos categoria,int dorsal,ArrayList<Jugador>listajugadores) {
         super(nombre, edad);
         this.categoria=categoria;
+        this.posicion=posicion;
         setDorsal(dorsal, listajugadores);
     }
 
