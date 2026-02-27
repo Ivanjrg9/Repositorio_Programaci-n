@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecec4ed5-0a21-41bb-a3e9-981fe815a334" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/AccionesDeportivas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/AccionesDeportivas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Acompanyante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Acompanyante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/AppMantenimiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/AppMantenimiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Entrenador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Entrenador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Equipos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Equipos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/FuncionesIntegrantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/FuncionesIntegrantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Jugador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Jugador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Masajista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Masajista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/MutxamelFC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/MutxamelFC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Posiciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PracticaMutxamelFC/Posiciones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,29 +43,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AppEcommerce.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AppProgramas.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LibrosApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.PacienteApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Tienda.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
-    &quot;JUnit.InvitadoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ProgramaTest.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ramos/OneDrive/Escritorio/Repositorio_Programación/ObjetosProgramacion/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AppEcommerce.executor": "Run",
+    "Application.AppMantenimiento.executor": "Run",
+    "Application.AppProgramas.executor": "Run",
+    "Application.LibrosApp.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.PacienteApp.executor": "Run",
+    "Application.Tienda.executor": "Run",
+    "DefaultPlantUmlFileTemplate": "UML Sequence",
+    "JUnit.InvitadoTest.executor": "Run",
+    "JUnit.ProgramaTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/ramos/OneDrive/Escritorio/Repositorio_Programación/ObjetosProgramacion/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />

@@ -63,10 +63,9 @@ public class Masajista extends MutxamelFC{
     }
     @Override
     public String toString() {
-        return "Masajista{" +
-                "titulacion='" + titulacion + '\'' +
-                ", anyosExperiencia=" + anyosExperiencia +
-                ", listajugadores=" + listajugadores + "nombre " + getNombre() +
-                '}';
+        return "Masajista{ " +
+                " titulacion = " + titulacion + '\'' +
+                " , anyosExperiencia = " + anyosExperiencia + ", nombre: " + getNombre() +
+                ", edad: " + getEdad() + '}';
     }
 }

@@ -52,10 +52,13 @@ public class AppMantenimiento {
                         break;
                     case "modificar":
                         System.out.println("Elige el masajista que quieres modificar");
+                        System.out.println();
                         for (int i = 0; i < listamasajistas.size(); i++) {
                             System.out.println(("( " + i + " )" + " " + listamasajistas.get(i).toString()));
                         }
-                        System.out.println("Cual quieres?");
+
+                        System.out.println();
+                        System.out.println("Cual quieres modificar? (Numero entre parentesis)");
                         int masajistaquequieres = teclado.nextInt();
 
                         if (masajistaquequieres >= listamasajistas.size()){
@@ -103,8 +106,10 @@ public class AppMantenimiento {
                 }
                 break;
             case "4":
-
-
+                System.out.println("=== Equipo Mutxamel FC ===");
+                for (Equipos equipos : Equipos.values()){
+                    System.out.println("- " + equipos);
+                }
                 break;
             case "X":
                 System.out.println("Saliendo...");
@@ -113,15 +118,9 @@ public class AppMantenimiento {
                 System.out.println("Elige una opcion correcta porfavor...");
                 break;
 
+
         }
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> 636e0e29252fdd092cd5f4f4af22f41c4ba5ecff
     }
 
 }
