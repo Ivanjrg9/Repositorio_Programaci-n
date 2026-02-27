@@ -61,4 +61,12 @@ public class Masajista extends MutxamelFC{
         System.out.println("Masajista " + getNombre() + " gritando goool!!" );
 
     }
+    @Override
+    public String toString() {
+        return "Masajista{" +
+                "titulacion='" + titulacion + '\'' +
+                ", anyosExperiencia=" + anyosExperiencia +
+                ", listajugadores=" + listajugadores + "nombre " + getNombre() +
+                '}';
+    }
 }
