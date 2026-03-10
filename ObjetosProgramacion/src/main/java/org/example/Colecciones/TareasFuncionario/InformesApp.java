@@ -57,19 +57,21 @@ public class InformesApp {
                     if (descripcion.matches("ADMINISTRATIVO") || descripcion.matches("EMPRESARIAL") || descripcion.matches("PERSONAL")){
                         Informe informeNuevo = new Informe(codigo,Descripcion.valueOf(descripcion));
                         pilaInformes.add(informeNuevo);
-                        System.out.println(informeNuevo + " Añadido correctamente!");
-                        System.out.println("Nuevo tamaño de la lista: " + pilaInformes.size());
                     }
+                    System.out.println("Nuevo tamaño de la lista: " + pilaInformes.size() + " informe/s");
+                    System.out.println("Lista actualizada: " + pilaInformes);
+
                     break;
                 case "no":
                     System.out.println("De acuerdo, saliendo...");
+                    System.out.println("Lista de informes pendientes: " + pilaInformes.size());
                     break;
                 default:
                     System.out.println("Inserta una opcion valida porfavor...");
                     break;
             }
 
-        }while (eleccion != "no");
+        }while (!eleccion.equals("no"));
 
 
 
