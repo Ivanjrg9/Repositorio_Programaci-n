@@ -1,15 +1,13 @@
 package org.example.Colecciones.TareasFuncionario;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class InformesApp {
     static void main() {
         Scanner teclado = new Scanner(System.in);
 
         Stack<Informe>pilaInformes = new Stack<>();
+        Set<Informe>informesUnicos = new HashSet<>(pilaInformes);
 
         Informe informeManolo = new Informe(12356,Descripcion.EMPRESARIAL);
         Informe informePaco = new Informe(32554,Descripcion.ADMINISTRATIVO);
@@ -22,6 +20,7 @@ public class InformesApp {
         pilaInformes.add(informeManu);
         pilaInformes.add(informeRamon);
         pilaInformes.add(informeLucia);
+
 
        System.out.println("Cantidad de informes: " + pilaInformes.size());
 
@@ -36,6 +35,7 @@ public class InformesApp {
                 System.out.println(pilaInformes);
             }else {
                 System.out.println("Numero de tareas por realizar: " + pilaInformes.size());
+                System.out.println("Informes unicos " + informesUnicos.size());
                 System.out.println(pilaInformes);
             }
             System.out.println("----------------------------------------------------");
@@ -57,6 +57,7 @@ public class InformesApp {
                     if (descripcion.matches("ADMINISTRATIVO") || descripcion.matches("EMPRESARIAL") || descripcion.matches("PERSONAL")){
                         Informe informeNuevo = new Informe(codigo,Descripcion.valueOf(descripcion));
                         pilaInformes.add(informeNuevo);
+                        informesUnicos.add(informeNuevo);
                     }
                     System.out.println("Nuevo tamaño de la lista: " + pilaInformes.size() + " informe/s");
                     System.out.println("Lista actualizada: " + pilaInformes);
@@ -64,7 +65,8 @@ public class InformesApp {
                     break;
                 case "no":
                     System.out.println("De acuerdo, saliendo...");
-                    System.out.println("Lista de informes pendientes: " + pilaInformes.size());
+                    System.out.println("Informes pendientes: " + pilaInformes.size());
+                    System.out.println("Informes unicos " + informesUnicos.size());
                     break;
                 default:
                     System.out.println("Inserta una opcion valida porfavor...");
@@ -72,9 +74,5 @@ public class InformesApp {
             }
 
         }while (!eleccion.equals("no"));
-
-
-
-
     }
 }

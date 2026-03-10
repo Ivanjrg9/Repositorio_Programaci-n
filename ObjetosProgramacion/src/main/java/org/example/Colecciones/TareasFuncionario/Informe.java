@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Objects;
+
 
 public class Informe {
     private int codigo;
@@ -30,6 +32,18 @@ public class Informe {
 
     public void setDescripcion(Descripcion descripcion) {
         this.descripcion = descripcion;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Informe informe = (Informe) o;
+        return codigo == informe.codigo && descripcion == informe.descripcion;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(codigo, descripcion);
     }
 
     @Override
