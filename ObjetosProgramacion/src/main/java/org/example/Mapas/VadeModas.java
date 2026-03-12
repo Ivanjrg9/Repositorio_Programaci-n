@@ -7,12 +7,10 @@ public class VadeModas {
     static java.util.Scanner in;
 
     public static boolean casoDePrueba() {
-       // leer caso de prueba
         int numero = in.nextInt();
         if (numero == 0)
         return false;
         else {
-            // CÓDIGO PRINCIPAL AQUÍ
             Map<Integer,Integer>mapa = new HashMap<>();
             for (int i = 0; i < numero; i++) {
                 int num = in.nextInt();
@@ -35,8 +33,7 @@ public class VadeModas {
 
             return true;
         }
-    } // casoDePrueba
-
+    }
     public static void main(String[] args) {
         in = new java.util.Scanner(System.in);
         while (casoDePrueba()) {
