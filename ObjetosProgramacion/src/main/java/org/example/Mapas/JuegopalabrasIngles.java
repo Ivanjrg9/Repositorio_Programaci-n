@@ -1,48 +1,77 @@
 package org.example.Mapas;
 
-import java.security.Key;
 import java.util.*;
 
 public class JuegopalabrasIngles {
     static HashMap<String, String> mapa = new HashMap<>();
 
-    public static void main() {
+    public static void main(String[] args) {
         JuegopalabrasIngles juego = new JuegopalabrasIngles();
         juego.cargarDiccionario();
 
-        System.out.println("Diccionario cargado con " + mapa.size() + " entradas.");
-        System.out.println("Traducción de 'ventana': " + mapa.get("ventana"));
+
+        juego.traduce();
     }
 
     public void nuevoPar(){
-
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Palabra en español: ");
+        String esp = teclado.next();
+        System.out.print("Traducción en inglés: ");
+        String eng = teclado.next();
+        mapa.put(esp, eng);
     }
 
     public void traduce(){
         Scanner teclado = new Scanner(System.in);
-        ArrayList<String>valores = new ArrayList<>(mapa.values());
-        ArrayList<String>claves = new ArrayList<>(mapa.keySet());
+        int totalPreguntas = 0;
+        int aciertos = 0;
+        int errores = 0;
 
-        System.out.println("Indique la respuesta correcta para: " + claves);
-        String resupesta = teclado.next();
+        while (true) {
+            String palabraEsp = palabraAleatoria();
+            String respuestaCorrecta = mapa.get(palabraEsp);
+            String pista = respuestaCorrecta.substring(0, 1).toUpperCase();
 
-        if (mapa.containsKey(resupesta)){
-            System.out.println("¡Correcto!");
-        }else {
-            System.out.println("ERROR! La respuesta correcta era: ");
+            System.out.println(palabraEsp.substring(0, 1).toUpperCase() + palabraEsp.substring(1) + ": " + pista + "...");
+            System.out.print("Indique la respuesta: ");
+            String resupesta = teclado.next().toLowerCase();
+
+            if (resupesta.equals("fin")) {
+                break;
+            }
+
+            totalPreguntas++;
+            if (resupesta.equals(respuestaCorrecta)){
+                System.out.println("¡CORRECTO!");
+                aciertos++;
+            } else {
+                String solucion = respuestaCorrecta.substring(0, 1).toUpperCase() + respuestaCorrecta.substring(1);
+                System.out.println("¡NO! La respuesta correcta es " + solucion);
+                errores++;
+            }
+        }
+
+        System.out.println("FIN DEL PROGRAMA");
+        System.out.println("Total preguntas: " + totalPreguntas);
+        System.out.println("Total aciertos: " + aciertos);
+        System.out.println("Total errores: " + errores);
+
+        if (totalPreguntas > 0) {
+            int porcentaje = (aciertos * 100) / totalPreguntas;
+            System.out.println("Aciertos: " + porcentaje + "%");
         }
     }
 
     public static String palabraAleatoria(){
         Random aleatorio = new Random();
-        ArrayList<String>claves = new ArrayList<>(mapa.keySet());
+        ArrayList<String> claves = new ArrayList<>(mapa.keySet());
 
-        return
-
+        int palabraRandom = aleatorio.nextInt(claves.size());
+        return claves.get(palabraRandom);
     }
 
     public void cargarDiccionario() {
-        // 1-100: BÁSICOS, PRONOMBRES Y CONECTORES
         mapa.put("yo", "i"); mapa.put("tu", "you"); mapa.put("el", "he"); mapa.put("ella", "she"); mapa.put("eso", "it");
         mapa.put("nosotros", "we"); mapa.put("ellos", "they"); mapa.put("mio", "mine"); mapa.put("tuyo", "yours"); mapa.put("este", "this");
         mapa.put("ese", "that"); mapa.put("aqui", "here"); mapa.put("alli", "there"); mapa.put("quien", "who"); mapa.put("que", "what");
@@ -51,9 +80,6 @@ public class JuegopalabrasIngles {
         mapa.put("hola", "hello"); mapa.put("adios", "goodbye"); mapa.put("gracias", "thanks"); mapa.put("por favor", "please"); mapa.put("perdon", "sorry");
         mapa.put("siempre", "always"); mapa.put("nunca", "never"); mapa.put("quiza", "maybe"); mapa.put("ahora", "now"); mapa.put("despues", "after");
         mapa.put("antes", "before"); mapa.put("muy", "very"); mapa.put("mucho", "much"); mapa.put("poco", "little"); mapa.put("bien", "well");
-        // (Añade conectores similares hasta 100...)
-
-        // 101-300: VERBOS COMUNES
         mapa.put("ser", "be"); mapa.put("tener", "have"); mapa.put("hacer", "do"); mapa.put("decir", "say"); mapa.put("ir", "go");
         mapa.put("venir", "come"); mapa.put("ver", "see"); mapa.put("mirar", "look"); mapa.put("querer", "want"); mapa.put("dar", "give");
         mapa.put("saber", "know"); mapa.put("pensar", "think"); mapa.put("tomar", "take"); mapa.put("poner", "put"); mapa.put("comer", "eat");
@@ -63,8 +89,6 @@ public class JuegopalabrasIngles {
         mapa.put("reir", "laugh"); mapa.put("llorar", "cry"); mapa.put("trabajar", "work"); mapa.put("estudiar", "study"); mapa.put("aprender", "learn");
         mapa.put("entender", "understand"); mapa.put("esperar", "wait"); mapa.put("llamar", "call"); mapa.put("ayudar", "help"); mapa.put("perder", "lose");
         mapa.put("ganar", "win"); mapa.put("sentir", "feel"); mapa.put("vivir", "live"); mapa.put("morir", "die"); mapa.put("traer", "bring");
-
-        // 301-500: TIEMPO, NÚMEROS Y COLORES
         mapa.put("lunes", "monday"); mapa.put("martes", "tuesday"); mapa.put("miercoles", "wednesday"); mapa.put("jueves", "thursday");
         mapa.put("viernes", "friday"); mapa.put("sabado", "saturday"); mapa.put("domingo", "sunday");
         mapa.put("enero", "january"); mapa.put("febrero", "february"); mapa.put("marzo", "march"); mapa.put("abril", "april");
@@ -74,8 +98,6 @@ public class JuegopalabrasIngles {
         mapa.put("negro", "black"); mapa.put("blanco", "white"); mapa.put("gris", "gray"); mapa.put("naranja", "orange");
         mapa.put("rosa", "pink"); mapa.put("marron", "brown"); mapa.put("morado", "purple"); mapa.put("oro", "gold");
         mapa.put("uno", "one"); mapa.put("dos", "two"); mapa.put("diez", "ten"); mapa.put("cien", "hundred"); mapa.put("mil", "thousand");
-
-        // 501-700: HOGAR, FAMILIA Y CUERPO
         mapa.put("casa", "house"); mapa.put("puerta", "door"); mapa.put("ventana", "window"); mapa.put("mesa", "table");
         mapa.put("silla", "chair"); mapa.put("cama", "bed"); mapa.put("cocina", "kitchen"); mapa.put("baño", "bathroom");
         mapa.put("jardin", "garden"); mapa.put("techo", "ceiling"); mapa.put("suelo", "floor"); mapa.put("llave", "key");
@@ -85,8 +107,6 @@ public class JuegopalabrasIngles {
         mapa.put("cabeza", "head"); mapa.put("cara", "face"); mapa.put("ojo", "eye"); mapa.put("nariz", "nose");
         mapa.put("boca", "mouth"); mapa.put("oreja", "ear"); mapa.put("mano", "hand"); mapa.put("brazo", "arm");
         mapa.put("pierna", "leg"); mapa.put("pie", "foot"); mapa.put("dedo", "finger"); mapa.put("sangre", "blood");
-
-        // 701-900: CIUDAD, NATURALEZA Y ANIMALES
         mapa.put("ciudad", "city"); mapa.put("calle", "street"); mapa.put("carro", "car"); mapa.put("avion", "plane");
         mapa.put("tren", "train"); mapa.put("barco", "boat"); mapa.put("bicicleta", "bike"); mapa.put("escuela", "school");
         mapa.put("hospital", "hospital"); mapa.put("banco", "bank"); mapa.put("tienda", "shop"); mapa.put("parque", "park");
@@ -96,8 +116,6 @@ public class JuegopalabrasIngles {
         mapa.put("perro", "dog"); mapa.put("gato", "cat"); mapa.put("pajaro", "bird"); mapa.put("caballo", "horse");
         mapa.put("vaca", "cow"); mapa.put("cerdo", "pig"); mapa.put("leon", "lion"); mapa.put("elefante", "elephant");
         mapa.put("pez", "fish"); mapa.put("araña", "spider"); mapa.put("hormiga", "ant"); mapa.put("oso", "bear");
-
-        // 901-1000: ADJETIVOS Y OBJETOS FINALES
         mapa.put("nuevo", "new"); mapa.put("viejo", "old"); mapa.put("grande", "big"); mapa.put("pequeño", "small");
         mapa.put("largo", "long"); mapa.put("corto", "short"); mapa.put("alto", "tall"); mapa.put("bajo", "short");
         mapa.put("caro", "expensive"); mapa.put("barato", "cheap"); mapa.put("caliente", "hot"); mapa.put("frio", "cold");
