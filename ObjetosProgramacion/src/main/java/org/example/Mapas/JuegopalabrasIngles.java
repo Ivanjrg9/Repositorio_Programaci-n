@@ -1,6 +1,5 @@
 package org.example.Mapas;
 
-import java.security.Key;
 import java.util.*;
 
 public class JuegopalabrasIngles {
@@ -10,35 +9,47 @@ public class JuegopalabrasIngles {
         JuegopalabrasIngles juego = new JuegopalabrasIngles();
         juego.cargarDiccionario();
 
-        System.out.println("Diccionario cargado con " + mapa.size() + " entradas.");
-        System.out.println("Traducción de 'ventana': " + mapa.get("ventana"));
+        traduce();
     }
 
     public void nuevoPar(){
 
     }
 
-    public void traduce(){
+    public static String traduce(){
         Scanner teclado = new Scanner(System.in);
-        ArrayList<String>valores = new ArrayList<>(mapa.values());
-        ArrayList<String>claves = new ArrayList<>(mapa.keySet());
+        String palabra_random = palabraAleatoria();
 
-        System.out.println("Indique la respuesta correcta para: " + claves);
+        primeraLetraTraduccion();
+        System.out.println("Indica la respuesta correcta:");
         String resupesta = teclado.next();
 
-        if (mapa.containsKey(resupesta)){
+        if (mapa.get(palabra_random).equals(resupesta)){
             System.out.println("¡Correcto!");
         }else {
-            System.out.println("ERROR! La respuesta correcta era: ");
+            System.out.println("ERROR! La respuesta correcta era: " + mapa.get(palabra_random));
         }
+        return palabra_random;
     }
 
+
     public static String palabraAleatoria(){
-        Random aleatorio = new Random();
         ArrayList<String>claves = new ArrayList<>(mapa.keySet());
+        Random aleatorio = new Random();
+        String palabra_aleatoria = claves.get(aleatorio.nextInt(claves.size()));
 
-        return
+        return palabra_aleatoria;
+    }
 
+    public static void primeraLetraTraduccion(){
+        String palabraEspanyol = palabraAleatoria();
+        String traduccionIngles = mapa.get(palabraEspanyol);
+
+        if (traduccionIngles != null && !traduccionIngles.isEmpty()) {
+            char primeraLetra = traduccionIngles.charAt(0);
+
+            System.out.println(palabraEspanyol + " : " + primeraLetra + " ...");
+        }
     }
 
     public void cargarDiccionario() {
@@ -51,7 +62,6 @@ public class JuegopalabrasIngles {
         mapa.put("hola", "hello"); mapa.put("adios", "goodbye"); mapa.put("gracias", "thanks"); mapa.put("por favor", "please"); mapa.put("perdon", "sorry");
         mapa.put("siempre", "always"); mapa.put("nunca", "never"); mapa.put("quiza", "maybe"); mapa.put("ahora", "now"); mapa.put("despues", "after");
         mapa.put("antes", "before"); mapa.put("muy", "very"); mapa.put("mucho", "much"); mapa.put("poco", "little"); mapa.put("bien", "well");
-        // (Añade conectores similares hasta 100...)
 
         // 101-300: VERBOS COMUNES
         mapa.put("ser", "be"); mapa.put("tener", "have"); mapa.put("hacer", "do"); mapa.put("decir", "say"); mapa.put("ir", "go");
