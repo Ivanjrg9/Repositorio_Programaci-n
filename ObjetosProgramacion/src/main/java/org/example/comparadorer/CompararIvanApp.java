@@ -14,7 +14,7 @@ public class CompararIvanApp {
         listaportatiles.add(mac1);
         listaportatiles.add(mac2);
 
-        TreeMap<Portatil,String>mapa = new TreeMap<>(Comparator.reverseOrder());
+       // TreeMap<Portatil,String>mapa = new TreeMap<>(Comparator.reverseOrder());
 
 
 

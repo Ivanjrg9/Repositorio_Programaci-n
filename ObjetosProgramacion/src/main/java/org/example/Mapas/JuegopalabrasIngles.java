@@ -7,15 +7,14 @@ public class JuegopalabrasIngles {
 
     public static void main(String[] args) {
         JuegopalabrasIngles juego = new JuegopalabrasIngles();
-        juego.cargarDiccionario();
+        try {
+            juego.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
 
-<<<<<<< HEAD
-        traduce();
-=======
-
-        juego.traduce();
->>>>>>> f9e5cb17ec119c6cea1c072b12993873827263ec
     }
+
 
     public void nuevoPar(){
         Scanner teclado = new Scanner(System.in);
@@ -28,7 +27,7 @@ public class JuegopalabrasIngles {
 
     public static String traduce(){
         Scanner teclado = new Scanner(System.in);
-<<<<<<< HEAD
+
         String palabra_random = palabraAleatoria();
 
         primeraLetraTraduccion();
@@ -39,7 +38,7 @@ public class JuegopalabrasIngles {
             System.out.println("¡Correcto!");
         }else {
             System.out.println("ERROR! La respuesta correcta era: " + mapa.get(palabra_random));
-=======
+
         int totalPreguntas = 0;
         int aciertos = 0;
         int errores = 0;
@@ -76,14 +75,14 @@ public class JuegopalabrasIngles {
         if (totalPreguntas > 0) {
             int porcentaje = (aciertos * 100) / totalPreguntas;
             System.out.println("Aciertos: " + porcentaje + "%");
->>>>>>> f9e5cb17ec119c6cea1c072b12993873827263ec
+
         }
         return palabra_random;
     }
 
 
-    public static String palabraAleatoria(){
-<<<<<<< HEAD
+    public String palabraAleatoria(){
+
         ArrayList<String>claves = new ArrayList<>(mapa.keySet());
         Random aleatorio = new Random();
         String palabra_aleatoria = claves.get(aleatorio.nextInt(claves.size()));
@@ -91,7 +90,7 @@ public class JuegopalabrasIngles {
         return palabra_aleatoria;
     }
 
-    public static void primeraLetraTraduccion(){
+    public void primeraLetraTraduccion(){
         String palabraEspanyol = palabraAleatoria();
         String traduccionIngles = mapa.get(palabraEspanyol);
 
@@ -100,13 +99,11 @@ public class JuegopalabrasIngles {
 
             System.out.println(palabraEspanyol + " : " + primeraLetra + " ...");
         }
-=======
         Random aleatorio = new Random();
         ArrayList<String> claves = new ArrayList<>(mapa.keySet());
 
         int palabraRandom = aleatorio.nextInt(claves.size());
         return claves.get(palabraRandom);
->>>>>>> f9e5cb17ec119c6cea1c072b12993873827263ec
     }
 
     public void cargarDiccionario() {
@@ -118,11 +115,8 @@ public class JuegopalabrasIngles {
         mapa.put("hola", "hello"); mapa.put("adios", "goodbye"); mapa.put("gracias", "thanks"); mapa.put("por favor", "please"); mapa.put("perdon", "sorry");
         mapa.put("siempre", "always"); mapa.put("nunca", "never"); mapa.put("quiza", "maybe"); mapa.put("ahora", "now"); mapa.put("despues", "after");
         mapa.put("antes", "before"); mapa.put("muy", "very"); mapa.put("mucho", "much"); mapa.put("poco", "little"); mapa.put("bien", "well");
-<<<<<<< HEAD
 
         // 101-300: VERBOS COMUNES
-=======
->>>>>>> f9e5cb17ec119c6cea1c072b12993873827263ec
         mapa.put("ser", "be"); mapa.put("tener", "have"); mapa.put("hacer", "do"); mapa.put("decir", "say"); mapa.put("ir", "go");
         mapa.put("venir", "come"); mapa.put("ver", "see"); mapa.put("mirar", "look"); mapa.put("querer", "want"); mapa.put("dar", "give");
         mapa.put("saber", "know"); mapa.put("pensar", "think"); mapa.put("tomar", "take"); mapa.put("poner", "put"); mapa.put("comer", "eat");
@@ -170,3 +164,4 @@ public class JuegopalabrasIngles {
         mapa.put("paz", "peace"); mapa.put("guerra", "war"); mapa.put("amor", "love"); mapa.put("odio", "hate");
     }
 }
+

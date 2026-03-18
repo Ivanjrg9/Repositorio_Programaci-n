@@ -1,0 +1,73 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam packageStyle rectangle
+
+package "org.example.Biblioteca" {
+
+    class Editorial {
+        - String pais
+        - String nombre
+        - ArrayList<Libros> listadelibros
+        + Editorial(String nombre, String pais)
+        + void anyadirlibro(Libros libro)
+        + void borrarlibro(Libros libro)
+        -- Getters/Setters --
+        + String getNombre()
+        + String getPais()
+    }
+
+    class Estudiante {
+        - {static} int contadorEstudiantes
+        - String nombre
+        - String curso
+        - int nia
+        - String email
+        - ArrayList<Libros> listalibros
+        + Estudiante(String nombre, String curso, String email)
+        + {static} boolean validarcorreo(String email)
+        + void insertarlibro(Libros libro)
+        --
+        + String toString()
+    }
+
+    class Libros {
+        - String titulo
+        - String autor
+        - String id
+        - boolean disponible
+        - {static} int cantidadLibros
+        + Libros(String titulo, String autor, Editorial ed)
+        + void Prestar(Estudiante est)
+        + void devolver()
+        - String generarId()
+    }
+
+    class Prestamo {
+        - LocalDateTime fecha
+        + Prestamo(Estudiante est, Libros lib)
+    }
+
+    class EstudianteApp << (M,#FF7700) Main >> {
+        {static} void main()
+    }
+
+    ' Relaciones de Estructura
+    ' Una editorial contiene muchos libros (Composición)
+    Editorial --  Libros : publica >
+
+    ' Un estudiante puede tener varios libros (Agregación)
+    Estudiante "1" o-- "*" Libros : tiene prestados >
+
+    ' El préstamo vincula a ambos
+    Prestamo "0..*" --> "1" Estudiante : realizado por
+    Prestamo "0..*" --> "1" Libros : referencia a
+
+    ' Notas para llenar el espacio con lógica
+    note right of Libros::Prestar
+      Valida:
+      1. disponibilidad == true
+      2. estudiante.listalibros.isEmpty()
+    end note
+}
+@enduml

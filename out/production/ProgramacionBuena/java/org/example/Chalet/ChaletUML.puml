@@ -1,0 +1,71 @@
+@startuml
+skinparam classAttributeIconSize 0
+skinparam Style strictuml
+skinparam packageStyle frame
+
+package "org.example.Chalet" {
+
+    class Casa {
+        - {static} Scanner teclado
+        - String direccion
+        - ArrayList<Habitacion> listahabitaciones
+        - Propietario propietario
+        + Casa(String direccion)
+        + void mostrarhabitaciones()
+        + Habitacion gethabitacionmasgrandes()
+        + void crearhabitacion(String nombre, double metroscuadrados)
+        + void borrarhabitacion(String nombre)
+        + void setPropietario()
+        + String toString()
+        -- Getters/Setters --
+        + String getDireccion()
+        + Propietario getPropietario()
+    }
+
+    class Habitacion {
+        - double metroscuadrados
+        - String nombre
+        - ArrayList<Electrodomesticos> listaelectrodomesticos
+        + Habitacion(String nombre, double metroscuadrados)
+        + void crearElectrodomestico(String nombre, double consumo)
+        + void mostrarElectrodomestico()
+        + double calcularConsumo(double consumo)
+        + void borrarElectrodomesticos()
+        + String toString()
+    }
+
+    class Electrodomesticos {
+        - String nombre
+        - double consumo
+        + Electrodomesticos(String nombre, double consumo)
+        + String toString()
+        -- Getters/Setters --
+        + String getNombre()
+        + double getConsumo()
+    }
+
+    class Propietario {
+        - String nombre
+        - int edad
+        + Propietario(String nombre, int edad)
+        + String toString()
+    }
+
+    class ChaletApp << (M,#FF7700) Main >> {
+        {static} void main()
+    }
+
+    ' Relaciones de Composición: Si la casa se destruye, sus habitaciones también
+    Casa "1" *-- "1..*" Habitacion : tiene >
+
+    ' Composición: La habitación gestiona el ciclo de vida de los electrodomésticos
+    Habitacion "1" *-- "0..*" Electrodomesticos : contiene >
+
+    ' Relación con Propietario
+    Casa "1" --> "1" Propietario : pertenece a >
+
+    ' Notas de implementación
+    note top of Casa : El método setPropietario()\npide datos por teclado.
+    note bottom of Habitacion : calcularConsumo() itera sobre\nlistaelectrodomesticos.
+}
+@enduml
