@@ -1,23 +1,14 @@
 package org.example.PracticaHormiguero;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.ArrayList;
 /**
  * Representa a un trabajador de un programa de televisión.
  * Incluye un sistema de autogeneración de ID y validación de cargos jerárquicos.
  */
 public class Empleado {
-    @Getter
     private String id;
-    @Getter
-    @Setter
     private String nombre;
-    @Getter
     private String cargo;
-    @Getter
-    @Setter
     private Empleado director;
 
     private static int contador=0;

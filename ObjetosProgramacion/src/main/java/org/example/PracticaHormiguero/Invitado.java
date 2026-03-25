@@ -1,9 +1,5 @@
 package org.example.PracticaHormiguero;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.time.LocalDate;
 import java.util.Scanner;
 
@@ -11,9 +7,7 @@ import java.util.Scanner;
  * Representa a un invitado que asiste a un programa de televisión.
  * Gestiona la información personal, profesional y la fecha de su visita.
  */
-@Getter
-@Setter
-@ToString
+
 public class Invitado {
     private String nombre;
     private String profesion;

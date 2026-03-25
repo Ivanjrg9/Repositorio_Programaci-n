@@ -1,7 +1,6 @@
 package org.example.PracticaHormiguero;
 
-import lombok.Getter;
-import lombok.Setter;
+
 
 import java.util.ArrayList;
 
@@ -10,16 +9,16 @@ import java.util.ArrayList;
  * su equipo de empleados y sus invitados.
  * Implementa la relación de composición con Empleados e Invitados.
  */
-@Getter
+
 public class Programa {
-    @Setter
+
     private String nombre;
     private int temporadas;
-    @Setter
+
     private Cadena cadena;
     private ArrayList<Empleado> listaEmpleados;
     private ArrayList<Invitado> listaInvitados;
-    @Setter
+
     private Empleado director;
 
     /**

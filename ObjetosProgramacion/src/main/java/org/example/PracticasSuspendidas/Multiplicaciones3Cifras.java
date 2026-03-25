@@ -5,23 +5,28 @@ import java.util.Scanner;
 public class Multiplicaciones3Cifras {
     public static void main() {
         Scanner teclado = new Scanner(System.in);
+        int multiplicando = 0;
+        do {
+            System.out.println("Introduce el multiplicando (3 cifras) :");
+            multiplicando = teclado.nextInt();
+            //Comprobamos que sean exactamente 3 cifras
+            if (multiplicando<100 || multiplicando > 999){
+                System.out.println("Error, solo 3 cifras...");
 
-        System.out.println("Introduce el multiplicando (3 cifras) :");
-        int multiplicando = teclado.nextInt();
-        //Comprobamos que sean exactamente 3 cifras
-        if (multiplicando<100 || multiplicando > 999){
-            System.out.println("Error, solo 3 cifras...");
-            return;
-        }
+            }
+        }while (multiplicando < 100 || multiplicando > 999);
 
-        System.out.println("Introduce el multiplicador (3 cifras) :");
-        int multiplicador = teclado.nextInt();
-        //Comprobamos que sean exactamente 3 cifras
-        if (multiplicador<100 || multiplicador > 999){
-            System.out.println("Error, solo 3 cifras...");
-            return;
-        }
+        int multiplicador = 0;
+        do {
+            System.out.println("Introduce el multiplicador (3 cifras) :");
+            multiplicador = teclado.nextInt();
 
+            //Comprobamos que sean exactamente 3 cifras
+            if (multiplicador<100 || multiplicador > 999){
+                System.out.println("Error, solo 3 cifras...");
+
+            }
+        }while (multiplicador<100 || multiplicador > 999);
 
         int resultado = multiplicador * multiplicando;
 

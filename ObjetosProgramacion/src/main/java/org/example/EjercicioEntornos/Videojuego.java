@@ -1,14 +1,8 @@
 package org.example.EjercicioEntornos;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.time.LocalDate;
 
-@Getter
-@Setter
-@ToString
+
 public class Videojuego {
     private String titulo;
     private String genero;
@@ -40,5 +34,65 @@ public class Videojuego {
 
     public void modificarInfo(){
 
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public LocalDate getAnyoLanzamiento() {
+        return anyoLanzamiento;
+    }
+
+    public void setAnyoLanzamiento(LocalDate anyoLanzamiento) {
+        this.anyoLanzamiento = anyoLanzamiento;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public String getPlataforma() {
+        return plataforma;
+    }
+
+    public void setPlataforma(String plataforma) {
+        this.plataforma = plataforma;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return "Videojuego{" +
+                "titulo='" + titulo + '\'' +
+                ", genero='" + genero + '\'' +
+                ", plataforma='" + plataforma + '\'' +
+                ", precio=" + precio +
+                ", stock=" + stock +
+                ", anyoLanzamiento=" + anyoLanzamiento +
+                '}';
     }
 }
