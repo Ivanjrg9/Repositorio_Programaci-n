@@ -92,6 +92,9 @@ public class Casa {
                 "Propietario " + propietario +
                 '}';
     }
+    static void generarNoseque(){
+        
+    }
 
 
 }
