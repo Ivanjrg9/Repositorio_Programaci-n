@@ -9,7 +9,7 @@ public class CalculadoraInteligente {
         System.out.println("*** Bienvenid@ a la calculadora simple ***");
         System.out.println("Introduce el operando...");
 
-        if (teclado.hasNextInt()){
+        if (teclado.hasNextInt()){ //Si lo sigueinte es un numero, ejecutamos la calculadora
             int numero = teclado.nextInt();
             System.out.println("---------------------------------");
             System.out.println("> Elige una operación:");
@@ -19,9 +19,9 @@ public class CalculadoraInteligente {
             System.out.println("Dividir [/]");
             System.out.println("Raíz Cuadrada [R]");
 
-            String opcion = teclado.next().toUpperCase();
+            String opcion = teclado.next().toUpperCase();//Pasamos la eleccion a mayusculas
 
-            switch (opcion){
+            switch (opcion){ //Según la elección que nos haya introducido el usuario ejecutamos una operación u otra, no tiene más la práctica quitando la raíz cuadrada vaya
                 case "+":
                     System.out.println("Introduce el numero por el cual quieres sumar:");
                     int numeroSumar = teclado.nextInt();
@@ -57,7 +57,6 @@ public class CalculadoraInteligente {
                     }else {
                         double resultadoRaiz = Math.sqrt(numero);
                         System.out.println("La raíz cuadrada de " + numero + " es: " + resultadoRaiz);
-
                     }
                     break;
                 default:
