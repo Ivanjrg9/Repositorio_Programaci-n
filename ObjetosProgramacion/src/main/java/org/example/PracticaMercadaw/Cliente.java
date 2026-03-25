@@ -1,5 +1,8 @@
 package org.example.PracticaMercadaw;
 
+/**
+ * Representa a un usuario del sistema con sus datos personales y su carrito.
+ */
 public class Cliente {
     private String usuario;
     private String contrasenya;
@@ -15,22 +18,20 @@ public class Cliente {
         this.pedido = null;
     }
 
-    /**
-     * Crea una nueva instancia de Pedido para el cliente.
-     */
     public void crearPedido() {
         this.pedido = new Pedido();
     }
 
     /**
-     * Añade un producto al pedido. Si el pedido no existe, lo crea.
+     * Inserta un producto en el pedido del cliente.
+     * Si el pedido no existe, lo crea automáticamente.
+     * @param producto El producto del catálogo a añadir.
      */
     public void insertarProducto(Producto producto) {
         // Si el pedido es null (como al principio), lo creamos [cite: 132]
         if (this.pedido == null) {
             crearPedido();
         }
-        // Llamamos al método de la clase Pedido para añadirlo [cite: 168, 169]
         this.pedido.agregarProducto(producto, 1);
     }
 

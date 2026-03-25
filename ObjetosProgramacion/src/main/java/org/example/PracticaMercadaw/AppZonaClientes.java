@@ -4,6 +4,10 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
+/**
+ * Clase principal que contiene la interfaz de usuario por consola.
+ * Controla el flujo de autenticación, compra y aplicación de descuentos.
+ */
 public class AppZonaClientes {
     private static Cliente cliente;
 
@@ -18,6 +22,10 @@ public class AppZonaClientes {
         }
     }
 
+    /**
+     * Gestiona el proceso de login con un máximo de 3 intentos.
+     * @param clientes El conjunto de clientes válidos para contrastar credenciales.
+     */
     public static void autenticacion(Set<Cliente> clientes) {
         Scanner teclado = new Scanner(System.in);
         int intentos = 3;
@@ -25,12 +33,12 @@ public class AppZonaClientes {
         while (intentos > 0) {
             System.out.println("=== COMPRA ONLINE EN MERCADAW ===");
             System.out.print("usuario: ");
-            String userLog = teclado.nextLine();
+            String usuario = teclado.nextLine();
             System.out.print("contraseña: ");
-            String passLog = teclado.nextLine();
+            String contrasenya = teclado.nextLine();
 
             for (Cliente cliente1 : clientes) {
-                if (cliente1.getUsuario().equals(userLog) && cliente1.getContrasenya().equals(passLog)) {
+                if (cliente1.getUsuario().equals(usuario) && cliente1.getContrasenya().equals(contrasenya)) {
                     cliente = cliente1;
                     System.out.println("Bienvenido, " + cliente.getUsuario());
                     return;
@@ -134,7 +142,7 @@ public class AppZonaClientes {
     }
 
     public static void imprimirDespedida() {
-        System.out.println("=== GRACIAS POR SU PEDIDO ==="); // [cite: 303]
-        System.out.println("Lo recibirá en unos días en la dirección " + cliente.getDireccion()); // [cite: 304]
+        System.out.println("=== GRACIAS POR SU PEDIDO ===");
+        System.out.println("Lo recibirá en unos días en la dirección " + cliente.getDireccion());
     }
 }

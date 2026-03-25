@@ -3,8 +3,10 @@ package org.example.PracticaMercadaw;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Gestiona los productos seleccionados por el usuario y el cálculo de costes.
+ */
 public class Pedido {
-    // He dejado 'listaCompra' porque es más claro, pero ojo al getter de abajo
     private HashMap<Producto, Integer> listaCompra;
     private double importeTotal;
 
@@ -29,6 +31,10 @@ public class Pedido {
         this.importeTotal += importe;
     }
 
+    /**
+     * Aplica la promoción 3x2: por cada tres unidades de un producto, se regala una.
+     * Actualiza el importe total tras el recálculo.
+     */
     public void aplicarPromo3x2() {
         double descuentoTotal = 0;
 
@@ -37,14 +43,17 @@ public class Pedido {
             int cantidadComprada = entrada.getValue();
 
             if (cantidadComprada >= 3) {
-                int unidadesRegaladas = cantidadComprada / 3;
-                descuentoTotal += unidadesRegaladas * producto.getPrecio();
+                int unidadesGratis = cantidadComprada / 3;
+                descuentoTotal += unidadesGratis * producto.getPrecio();
             }
         }
         this.importeTotal -= descuentoTotal;
         System.out.println("Aplicada promo 3x2. Ahorro: " + descuentoTotal + "€");
     }
 
+    /**
+     * Aplica un descuento del 10% sobre el importe total actual del pedido.
+     */
     public void aplicarPromo10() {
         double diezPorCiento = this.importeTotal * 0.10;
         this.importeTotal -= diezPorCiento;
@@ -56,7 +65,6 @@ public class Pedido {
         return importeTotal;
     }
 
-    // He cambiado el nombre del método para que coincida con el UML
     public HashMap<Producto, Integer> getPedido() {
         return listaCompra;
     }
