@@ -37,22 +37,22 @@ public class Multiplicaciones3Cifras {
         System.out.println("----------");
 
         // Convertimos el multiplicador a String
-        String s2 = Integer.toString(multiplicador);
+        String posicion = Integer.toString(multiplicador);
 
         // Sacamos los dígitos uno a uno con substring
-        String d3 = s2.substring(2, 3); // Unidades
-        String d2 = s2.substring(1, 2); // Decenas
-        String d1 = s2.substring(0, 1); // Centenas
+        String numero1 = posicion.substring(2, 3); // Unidades
+        String numero2 = posicion.substring(1, 2); // Decenas
+        String numero3 = posicion.substring(0, 1); // Centenas
 
         // Calculamos los resultados de cada una de las partes
-        int p1 = multiplicando * Integer.parseInt(d3);
-        int p2 = multiplicando * Integer.parseInt(d2);
-        int p3 = multiplicando * Integer.parseInt(d1);
+        int parcial1 = multiplicando * Integer.parseInt(numero1);
+        int parcial2 = multiplicando * Integer.parseInt(numero2);
+        int parcial3 = multiplicando * Integer.parseInt(numero3);
 
         // Mostramos los resultados
-        System.out.println("   " + p1);
-        System.out.println("  " + p2 + "x");
-        System.out.println(" " + p3 + "xx");
+        System.out.println("   " + parcial1);
+        System.out.println("  " + parcial2 + "x");
+        System.out.println(" " + parcial3 + "xx");
 
         System.out.println("----------");
         System.out.println("  " + resultado);
