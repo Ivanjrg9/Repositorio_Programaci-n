@@ -23,8 +23,11 @@ public class Cliente {
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5d1a53cc90dc2872aeebe6df86ba7f595bcc3d67
     public String getUsuario() {
         return usuario;
     }
