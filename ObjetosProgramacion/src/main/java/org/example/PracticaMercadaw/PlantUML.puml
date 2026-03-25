@@ -1,0 +1,62 @@
+@startuml
+
+package "mercadaw" {
+
+    enum Producto {
+        MANZANAS(2.30)
+        PAN(1.0)
+        ARROZ(3.50)
+        POLLO(4.30)
+        LECHE(1.30)
+        ACEITE(8.30)
+        HUEVOS(3.30)
+        TOMATES(4.0)
+        PASTA(0.89)
+    }
+
+    class AppZonaClientes {
+        - {static} cliente : Cliente
+        + {static} main(args : String[]) : void
+        + {static} autenticacion(clientes : Set<Cliente>) : void
+        + {static} iniciarCompra() : void
+        + {static} imprimirProductos() : void
+        + {static} imprimirResumen() : void
+        + {static} imprimirDespedida() : void
+        + {static} mostrarOpciones() : void
+    }
+
+    class Mercadaw {
+        - clientes : Set<Cliente>
+        + Mercadaw()
+        + generarClientes() : void
+        + getClientes() : Collections.unmodifiableSet(Set<Cliente>)
+    }
+
+    class Cliente {
+        - usuario : String
+        - contrasenya : String
+        - direccion : String
+        - pedido : Pedido
+        - promociones : boolean
+        + Cliente(usuario : String, contrasenya : String)
+        + crearPedido() : void
+        + insertarProducto(producto : Producto) : void
+    }
+
+    class Pedido {
+        - pedido : HashMap<Producto, Integer>
+        - importeTotal : double
+        + Pedido()
+        + actualizarImporteTotal(importe : double) : void
+        + aplicarPromo3x2() : void
+        + aplicarPromo10() : void
+    }
+
+    AppZonaClientes --> Mercadaw
+    AppZonaClientes --> Cliente
+    Mercadaw "1" *-- "many" Cliente : contiene
+    Cliente "1" *-- "0..1" Pedido : realiza
+    Pedido "many" o-- "1" Producto : incluye
+}
+
+@enduml

@@ -1,43 +1,22 @@
 package org.example.PracticaMercadaw;
 
-<<<<<<< HEAD
-import java.util.LinkedHashSet;
-
-public class Mercadaw {
-    LinkedHashSet<Cliente>listaClientes = new LinkedHashSet<>();
-
-    public Mercadaw(){
-
-    }
-=======
+import java.util.HashSet;
 import java.util.Collections;
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Mercadaw {
-    private LinkedHashSet<Cliente>listaClientes = new LinkedHashSet<>();
+    private Set<Cliente> clientes;
 
-
->>>>>>> 5d1a53cc90dc2872aeebe6df86ba7f595bcc3d67
-
-    public void generarClientes(){
-
+    public Mercadaw() {
+        this.clientes = new HashSet<>();
     }
 
-<<<<<<< HEAD
-    public LinkedHashSet<Cliente> getListaClientes() {
-        return listaClientes;
-=======
-    public Mercadaw(LinkedHashSet<Cliente> listaClientes) {
-        this.listaClientes = new LinkedHashSet<>();
+    public void generarClientes() {
+        clientes.add(new Cliente("pepe", "1234"));
+        clientes.add(new Cliente("ana", "5678"));
     }
 
-    public Set<Cliente> getListaClientes() {
-        return Collections.unmodifiableSet(this.listaClientes);
-    }
-
-    public void setListaClientes(LinkedHashSet<Cliente> listaClientes) {
-        this.listaClientes = listaClientes;
->>>>>>> 5d1a53cc90dc2872aeebe6df86ba7f595bcc3d67
+    public Set<Cliente> getClientes() {
+        return Collections.unmodifiableSet(this.clientes);
     }
 }
