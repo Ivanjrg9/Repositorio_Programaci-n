@@ -1,5 +1,6 @@
 package org.example.PracticasSuspendidas;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,17 +10,16 @@ public class Primitiva {
         Random aleatorio = new Random();
 
         boolean formatoCorrecto = false;
-        int bolasSorteo;
-        int reintegro;
+
         System.out.println("*** Sorteo de la primitiva ***");
 
         do {
             System.out.println("Selecciona seis numeros del 1 al 49 y un numero reintegro del 0 al 9:");
             System.out.println("Formato:  N-N-N-N-N-N/R");
             String bolasSorteoUsuario = teclado.nextLine();
-            String bolasUsuarioVector[] = bolasSorteoUsuario.split("[-/]");
 
             if (bolasSorteoUsuario.matches("\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}-\\d{1,2}/\\d")){
+                String bolasUsuarioVector[] = bolasSorteoUsuario.split("[-/]");
                 for (int i = 0; i < bolasUsuarioVector.length; i++) {
                     int numeros = Integer.parseInt(bolasUsuarioVector[i]);
                     if (numeros < 1 || numeros > 49){
@@ -30,11 +30,32 @@ public class Primitiva {
                     }
                 }
 
-                for (int i = 0; i < 6; i++) {
-                    bolasSorteo = aleatorio.nextInt(48)+1;
-                    System.out.println(bolasSorteo);
+                System.out.println("*** NUMEROS DEL SORTEO ***");
 
+                int aciertos = 0;
+                int bomboSorteo[] = new int[6];
+
+                for (int i = 0; i < bomboSorteo.length; i++) {
+                    int bolasBombo = aleatorio.nextInt(49)+1;
+
+                    for (int j = 0; j < bolasBombo; j++) {
+                        if (bomboSorteo[i] == bolasBombo){
+                          
+                        }
+                        bomboSorteo[i] = bolasBombo;
+                    }
+                    Arrays.sort(bomboSorteo);
                 }
+                System.out.println("Bolas del sorteo: " + Arrays.toString(bomboSorteo));
+
+
+
+                System.out.println("Aciertos: " + aciertos);
+
+                int reintegro;
+                reintegro = aleatorio.nextInt(8)+1;
+                System.out.println("Reintegro: " + reintegro);
+
 
                 formatoCorrecto = true;
             }else {
