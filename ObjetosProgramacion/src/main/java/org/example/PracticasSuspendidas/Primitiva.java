@@ -5,10 +5,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Primitiva {
-    static void main() {
+    public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         Random aleatorio = new Random();
-
         boolean formatoCorrecto = false;
 
         System.out.println("*** Sorteo de la primitiva ***");
@@ -37,25 +36,42 @@ public class Primitiva {
 
                 for (int i = 0; i < bomboSorteo.length; i++) {
                     int bolasBombo = aleatorio.nextInt(49)+1;
-
-                    for (int j = 0; j < bolasBombo; j++) {
-                        if (bomboSorteo[i] == bolasBombo){
-                          
+                    boolean repetida = false;
+                    for (int j = 0; j < i; j++) {
+                        if (bomboSorteo[j] == bolasBombo) {
+                            repetida = true;
+                            break;
                         }
-                        bomboSorteo[i] = bolasBombo;
                     }
-                    Arrays.sort(bomboSorteo);
+                    if (repetida) {
+                        i--;
+                        continue;
+                    }
+                    bomboSorteo[i] = bolasBombo;
                 }
+                Arrays.sort(bomboSorteo);
+                int reintegro;
+                reintegro = aleatorio.nextInt(10);
+                System.out.println("Reintegro: " + reintegro);
                 System.out.println("Bolas del sorteo: " + Arrays.toString(bomboSorteo));
 
-
-
+                for (int i = 0; i < bomboSorteo.length; i++) {
+                    for (int j = 0; j < 6; j++) {
+                        if (bomboSorteo[i] == Integer.parseInt(bolasUsuarioVector[j])) {
+                            aciertos++;
+                            break;
+                        }
+                    }
+                }
                 System.out.println("Aciertos: " + aciertos);
 
-                int reintegro;
-                reintegro = aleatorio.nextInt(8)+1;
-                System.out.println("Reintegro: " + reintegro);
+                int ultimoDigito = bolasSorteoUsuario.charAt(bolasSorteoUsuario.length()-1) - '0';
 
+                if (reintegro == ultimoDigito){
+                    System.out.println("Reintegro!");
+                }else {
+                    System.out.println("No ha tocado el reintegro...");
+                }
 
                 formatoCorrecto = true;
             }else {
@@ -65,6 +81,5 @@ public class Primitiva {
             }
 
         }while (!formatoCorrecto);
-
     }
 }

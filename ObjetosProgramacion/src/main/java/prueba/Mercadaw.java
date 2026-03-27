@@ -1,4 +1,4 @@
-package org.example.PracticaMercadaw;
+package prueba;
 
 import java.util.HashSet;
 import java.util.Collections;
@@ -22,6 +22,7 @@ public class Mercadaw {
     public void generarClientes() {
         clientes.add(new Cliente("pepe", "1234"));
         clientes.add(new Cliente("ana", "5678"));
+
     }
 
     public Set<Cliente> getClientes() {

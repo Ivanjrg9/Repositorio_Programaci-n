@@ -1,4 +1,4 @@
-package org.example.PracticaMercadaw;
+package prueba;
 
 /**
  * Representa a un usuario del sistema con sus datos personales y su carrito.

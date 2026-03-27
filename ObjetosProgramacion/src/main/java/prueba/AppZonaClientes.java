@@ -1,4 +1,4 @@
-package org.example.PracticaMercadaw;
+package prueba;
 
 import java.util.Map;
 import java.util.Scanner;
@@ -11,7 +11,8 @@ import java.util.Set;
 public class AppZonaClientes {
     private static Cliente cliente;
 
-    public static void main(String[] args) {
+    static void main() {
+
         Mercadaw tienda = new Mercadaw();
         tienda.generarClientes();
 

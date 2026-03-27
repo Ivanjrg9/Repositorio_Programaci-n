@@ -62,6 +62,7 @@ public class EpsteinApp {
         while (!listafamosos.isEmpty()){
             listafamosos.removeIf(famoso -> famoso.getEdad() < 16);
         }
+        System.out.println(listafamosos);
     }
 
     static Estadistica generarEstadisticas(ArrayList<Famoso>listaEpstein){
