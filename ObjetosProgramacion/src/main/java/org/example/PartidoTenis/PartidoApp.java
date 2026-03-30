@@ -9,5 +9,6 @@ public class PartidoApp {
         Partido partido = new Partido(j1,j2);
 
 
+
     }
 }

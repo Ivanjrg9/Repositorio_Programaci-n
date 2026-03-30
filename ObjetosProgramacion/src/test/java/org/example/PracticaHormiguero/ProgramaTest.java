@@ -20,7 +20,7 @@ public class ProgramaTest {
         Cadena c = new Cadena("Telecinco");
         Programa p = new Programa("La Rebelión", c, "Director X");
 
-        p.insertarInvitado("Prueba", "Test", 1);
+        p.insertarInvitado("prueba", "Test", 1);
         assertEquals(1, p.getListaInvitados().size());
     }
 
