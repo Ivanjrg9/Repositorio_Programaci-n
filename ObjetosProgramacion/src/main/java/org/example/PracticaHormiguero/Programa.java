@@ -11,14 +11,11 @@ import java.util.ArrayList;
  */
 
 public class Programa {
-
     private String nombre;
     private int temporadas;
-
     private Cadena cadena;
     private ArrayList<Empleado> listaEmpleados;
     private ArrayList<Invitado> listaInvitados;
-
     private Empleado director;
 
     /**
