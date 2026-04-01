@@ -1443,4 +1443,24 @@
 //    [ ] Validacion de errores
 //    [ ] Pruebas en main
 //    */
+
+
+// GENERAR MATRICUAS DE COCHES 
+//Random rnd = new Random();
+
+// 4 dígitos: 1000–9999
+//int numeros = rnd.nextInt(9000) + 1000;
+
+// letras válidas en matrículas españolas (sin vocales, sin Ñ, sin Q)
+//String letrasValidas = "BCDFGHJKLMNPRSTUVWXYZ";
+
+// 3 letras aleatorias del conjunto
+//String letras = "";
+//for (int i = 0; i < 3; i++) {
+//int pos = rnd.nextInt(letrasValidas.length());
+//letras += letrasValidas.charAt(pos);
+//}
+
+//String matricula = numeros + " " + letras;
+// → ej: "4721 KRB"
 //}
