@@ -1,8 +1,8 @@
-package org.example.EXAMEN_T7_EPSTEIN;
+package org.example.Examen_T7_Famosos;
 
 import java.util.*;
 
-public class EpsteinApp {
+public class FamososApp {
     static LinkedList<Famoso>listafamosos = new LinkedList<>();
 
     static void procesarDatos(){
@@ -10,11 +10,11 @@ public class EpsteinApp {
         System.out.println("Procesando datos desde EntradaDeDatos...");
         EntradaDatos.generarDatos();
         Queue<Famoso> famosos = EntradaDatos.getDatosActuales();
-        ArrayList<Famoso>listaEpstein = new ArrayList<>();
+        ArrayList<Famoso>listaFamosos = new ArrayList<>();
 
         while (!famosos.isEmpty()){
             Famoso famoso = famosos.poll();
-            listaEpstein.add(famoso);
+            listaFamosos.add(famoso);
             System.out.println(famoso);
         }
     }
@@ -50,7 +50,7 @@ public class EpsteinApp {
         Famoso famosobuscado = new Famoso(nombre,pais,profesion,edad);
 
         if (listafamosos.contains(famosobuscado)){
-            System.out.println("El famoso ha estado en la isla de Epstein...");
+            System.out.println("El famoso ha estado en la isla...");
         }else {
             System.out.println("El famoso no ha estado en la isla, no esta en la lista...");
         }
@@ -65,7 +65,7 @@ public class EpsteinApp {
         System.out.println(listafamosos);
     }
 
-    static Estadistica generarEstadisticas(ArrayList<Famoso>listaEpstein){
+    static Estadistica generarEstadisticas(ArrayList<Famoso>listaFamosos){
         Map<Famoso,Integer>mapaEstadistica = new HashMap<>();
 
 

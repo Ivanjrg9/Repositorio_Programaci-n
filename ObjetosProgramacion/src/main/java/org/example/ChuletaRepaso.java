@@ -1,6 +1,6 @@
 //package org.example;
 //
-//public class ChuletaManuela {
+//public class ChuletaRepaso {
 //    // =====================================================================
 //    //  BLOQUE 1: ENTRADA DE DATOS + TRY-CATCH
 //    // =====================================================================
@@ -646,7 +646,7 @@
 //    }
 //
 //    // --- getOrDefault: si no existe la clave, devuelve valor por defecto ---
-//    // Útil para CONTAR apariciones (estilo examen Epstein)
+//    // Útil para CONTAR apariciones (estilo examen de famosos)
 //    HashMap<String, Integer> contador = new HashMap<>();
 //    String[] palabras = {"hola", "mundo", "hola", "java", "hola"};
 //        for (String p : palabras) {
@@ -661,7 +661,7 @@
 //        mapaOrdenado.put("Luis", 3);
 //    // Recorre en orden: Ana, Carlos, Luis
 //
-//    // --- Ordenar un mapa por VALOR (descendente) - estilo ranking Epstein ---
+//    // --- Ordenar un mapa por VALOR (descendente) - estilo ranking de famosos ---
 //    ArrayList<Map.Entry<String, Integer>> listaEntries = new ArrayList<>(contador.entrySet());
 //        listaEntries.sort(Map.Entry.comparingByValue(Comparator.reverseOrder()));
 //        for (Map.Entry<String, Integer> entry : listaEntries) {
@@ -689,7 +689,7 @@
 //
 //    // --- Eliminar menores de edad de una lista de objetos ---
 //        /*
-//        Iterator<Famoso> it = listaEpstein.iterator();
+//        Iterator<Famoso> it = listaFamosos.iterator();
 //        while (it.hasNext()) {
 //            Famoso f = it.next();
 //            if (f.getEdad() < 18) {

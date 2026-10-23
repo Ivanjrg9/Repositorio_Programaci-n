@@ -1,4 +1,4 @@
-package org.example.EXAMEN_T7_EPSTEIN;
+package org.example.Examen_T7_Famosos;
 
 import java.util.LinkedList;
 import java.util.Queue;
